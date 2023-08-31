@@ -49,7 +49,6 @@ class Bot(Client):
         self.username = me.username
         self.log_channel = LOG_CHANNEL
         self.uptime = UPTIME   
-        except Exception as e: logger.warning(f"Bot Isn't Able To Send Message To LOG_CHANNEL \n{e}")
         if WEBHOOK is True:
             app = web.AppRunner(await web_server())
             await app.setup()
